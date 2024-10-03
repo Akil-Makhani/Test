@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "export",
   images: {
-    domains: ["mixdrom.com"],
+    domains: ["mixdrom.com", "a.hwstatic.com"],
     unoptimized: true,
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
