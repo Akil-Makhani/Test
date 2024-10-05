@@ -31,12 +31,15 @@ const CustomPagination = dynamic(
   }
 );
 
-const SearchPropforSearch = dynamic(
-  () => import("../components/home/SearchPropforSearch"),
-  {
+const SearchPropforSearch = dynamic(() =>
+  import("../components/home/SearchPropforSearch").then((mod) => {
+    console.log(mod);
+    return mod.default;
+  }), {
     ssr: false,
   }
 );
+
 
 
 import Faciicons from "@/services/icon";
